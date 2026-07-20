@@ -1,0 +1,74 @@
+/* =========================================================
+   The Imperial Dictionary 1885 - GoldenDict CSS Theme
+   ========================================================= */
+
+/* 1. Base Article Styling (The Paper & Ink) */
+.dsl_article {
+    /* Century Schoolbook is arguably the closest modern digital equivalent to late 19th-century dictionary typefaces */
+    font-family: "Century Schoolbook", "Times New Roman", Georgia, serif;
+    font-size: 16px;
+    line-height: 1.35;
+    color: #1a1a1a; /* Soft black/dark gray to mimic aged ink */
+    background-color: #fdfcf7; /* Very subtle ivory/warm tint to mimic vintage paper */
+    text-align: justify; /* The original columns are strictly justified */
+    padding: 10px;
+}
+
+/* 2. Headword Styling */
+.dsl_headwords {
+    font-family: "Century Schoolbook", "Times New Roman", Georgia, serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px; /* Slight tracking for emphasis */
+}
+
+/* 3. Main Definition Body [m2] */
+.m2 {
+    margin-left: 0px; 
+    margin-top: 4px;
+    margin-bottom: 4px;
+    /* This creates a slight hanging indent for secondary lines, common in old dictionaries */
+    padding-left: 15px; 
+    text-indent: -15px; 
+}
+
+/* 4. Quotation Blocks [m3] */
+.m3 {
+    margin-left: 35px; /* Deep indent to match the layout of the original text */
+    margin-top: 6px;
+    margin-bottom: 6px;
+    font-size: 14.5px; /* Slightly smaller font for quotations, true to the era */
+    text-indent: 0px; 
+}
+
+/* 5. Toning down the Blue Quotes [c blue] */
+/* We used blue in the DSL for logical separation, but to look like the original, we change it to a distinct but printable dark slate here */
+.dsl_c_blue, span[style*="color: blue"], span[style*="color:blue"] {
+    color: #2c3e50 !important; 
+}
+
+/* 6. Image Placeholders & Captions [s] */
+img {
+    display: block;
+    margin: 15px auto 5px auto; /* Centered with breathing room, just like the column layout */
+    max-width: 85%; /* Prevents large images from blowing out the margins */
+    border: 1px solid #e0e0e0; /* Optional: Very subtle border to define the image boundary */
+    mix-blend-mode: multiply; /* Helps white backgrounds on your future screenshots blend into the ivory page */
+}
+
+/* Ensure the caption text immediately under an image is centered */
+img + .m2 {
+    text-align: center;
+    font-size: 13px;
+    font-style: italic;
+    text-indent: 0px;
+    padding-left: 0px;
+}
+
+/* 7. General Italics (Authors & Headword references in quotes) */
+i {
+    font-style: italic;
+    color: #000000; /* Ensures authors stand out firmly at the end of the blue quotes */
+}

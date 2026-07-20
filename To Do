@@ -1,0 +1,14 @@
+1. Create document in full
+2. Change quotation color (simplicity itself, ctrl+H for [c blue] to [c maroon] or whatever
+3. Python script:
+ - Automatically italicize n.pl., v.t., etc (NOT pp. for some reason) when they are x number of characters from [m2]
+ - extend regular dashes to em dashes when they are found near a number in the definition
+ - Split entries when the numbers 1. ,2. ,3. etc appear to denote different meanings.
+ - Any headword which has the form 'and, ann, anc' should be split into three definitions with the first two merely being reference pointers for the first. (AKA split by comma)
+
+What makes a word italicised in the definition?
+
+
+
+7/19/26 A to Accent
+
