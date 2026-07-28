@@ -131,11 +131,15 @@ def main():
             # Handle "Spelling1 , Spelling2" formatting by splitting on commas
             sub_words = [w.strip() for w in hw_line.split(',')]
             for sub_word in sub_words:
+                if not sub_word:  # Skip empty strings from stray commas
+                    continue
+                
                 lower_sub = sub_word.lower()
                 if lower_sub not in valid_words:
-                    # NEW: Bypass if replacing dashes with spaces results in a valid word
-                    if '-' in lower_sub and lower_sub.replace('-', ' ') in valid_words:
-                        continue
+                    # Bypass if replacing dashes with spaces OR removing dashes completely results in a valid word
+                    if '-' in lower_sub:
+                        if lower_sub.replace('-', ' ') in valid_words or lower_sub.replace('-', '') in valid_words:
+                            continue
                         
                     invalid_targets.append((i, hw_idx, hw_line, sub_word))
                     break # Only flag the line once, even if multiple parts are invalid
@@ -168,8 +172,10 @@ def main():
             nearest = get_nearest_match(bad_sub_word, valid_words)
             
             # Capitalize the suggestion to match Imperial Dictionary conventions
-            if nearest != "No close match found":
+            if nearest and nearest != "No close match found":
                 nearest = nearest.capitalize()
+            elif not nearest:
+                nearest = "No close match found"
             
             print("\n" + "="*60)
             print(f"Reviewing {count} of {total_invalid}")

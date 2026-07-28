@@ -4,7 +4,7 @@
  - Automatically italicize n.pl., v.t., etc (NOT pp. for some reason) when they are x number of characters from [m2]
  - extend regular dashes to em dashes when they are found near a number in the definition
  - Split entries when the numbers 1. ,2. ,3. etc appear to denote different meanings.
- - Any headword which has the form 'and, ann, anc' should be split into three definitions with the first two merely being reference pointers for the first. (AKA split by comma)
+ - Any headword which has the form 'and, ann, anc' should be split into three definitions with the first two merely being reference pointers for the first. (AKA split by comma) ---- OR the Chambers 20th century has the ability to search for headwords contained within the definition...how? Can I do that too?
 
 What makes a word italicised in the definition?
 
@@ -16,4 +16,3 @@ What makes a word italicised in the definition?
 
 
 Double-check auto fix:
-Accloy, Accloye
